@@ -1,0 +1,48 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!--beans xmlns="...">
+     This specifies the schema definitions for the Spring Beans
+and the XML document's structure.
+   -->
+    <!--<bean id="employee" class="org.example.Employee" scope="singleton"></bean> -->
+  <!--Defines a bean with ID employee that refers to the org.example.Employee class.
+  This tells Spring to create an object of type Employee
+  (from the org.example.Employee class) and manage its lifecycle.
+  The scope="singleton" indicates that Spring will create
+  only one instance of the Employee class for the entire application.-->
+
+    <bean id="employee" class="org.example.Employee">
+       <!-- <property name ="Salary" value="100"></property> -->
+        <property name="lap" ref="lap1"></property>
+
+        <!-- Multiple property tags not need it will lead to duplication-->
+ <!--The <property> tag is used to set the Salary field of the Employee bean.
+  The name="Salary" refers to the setter method in the Employee class
+  (which should be setSalary()).
+  The value attribute sets the value of the Salary field.
+ -->
+    </bean>
+
+    <bean id="lap1" class="org.example.Laptop">
+
+    </bean>
+
+
+
+    <bean id="labour" class="org.example.Labour" scope="prototype">
+    <!--Defines a bean with ID labour that refers to the org.example.Labour class.
+    The scope="prototype" indicates that a new instance of the Labour class
+    will be created each time it is requested from the Spring container.-->
+        <property name ="labid" value="111"></property>
+    </bean>
+
+</beans>
+
+<!--spring.xml file contains -definition of beans,the configurations,
+  their dependencies, scopes,
+  and any other Spring-related configurations.-->
+<!-- It uses the <bean> tag to define the properties of each class
+and how they should be instantiated.
+-->
