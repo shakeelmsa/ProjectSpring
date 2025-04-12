@@ -5,6 +5,7 @@ public class Employee {
     // instance variable
   private  int salary;
   private Laptop lap;
+  private Salary sal;
 
 
     // Constructor
@@ -23,12 +24,26 @@ public class Employee {
         this.lap = lap;
     }
 
+    public Salary getSal() {
+        return sal;
+    }
 
+    public void setSal(Salary sal) {
+        this.sal = sal;
+    }
 
     //Normal Method
     public void giventask(){
 
         System.out.println("Completed the Given Task");
         lap.compile();
+
     }
+
+    public void salarybankaccount(){
+        System.out.println("Created in SBI");
+        sal.bankaccount();
+    }
+
+
 }

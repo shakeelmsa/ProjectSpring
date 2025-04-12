@@ -35,5 +35,8 @@ public class App
        System.out.println(obj1.getLabid());
        obj1.labourenrollment();
 
+       Salary obj2 = (Salary) context.getBean("salary");
+       obj2.bankaccount();
+
     }
 }
