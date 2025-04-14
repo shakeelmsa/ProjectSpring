@@ -30,6 +30,8 @@ public class App
 
 
        obj.giventask();
+       obj.salarybankaccount();
+       obj.currentaccount();
 
        Labour obj1 = (Labour) context.getBean("labour");
        System.out.println(obj1.getLabid());
@@ -37,6 +39,9 @@ public class App
 
        Salary obj2 = (Salary) context.getBean("salary");
        obj2.bankaccount();
+
+       Salary obj3 = (Salary) context.getBean("salary");
+       obj3.newaccount();
 
     }
 }

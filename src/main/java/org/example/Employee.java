@@ -45,5 +45,10 @@ public class Employee {
         sal.bankaccount();
     }
 
+    public void currentaccount(){
+        System.out.println("created in IDBI");
+        sal.newaccount();
+    }
+
 
 }
