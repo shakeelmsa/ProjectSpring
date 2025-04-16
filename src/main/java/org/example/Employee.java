@@ -6,6 +6,7 @@ public class Employee {
   private  int salary;
   private Laptop lap;
   private Salary sal;
+  private Mobile mob;
 
 
     // Constructor
@@ -48,6 +49,10 @@ public class Employee {
     public void currentaccount(){
         System.out.println("created in IDBI");
         sal.newaccount();
+    }
+
+    public void electronic(){
+        mob.Vivo();
     }
 
 

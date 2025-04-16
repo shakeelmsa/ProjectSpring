@@ -32,6 +32,7 @@ public class App
        obj.giventask();
        obj.salarybankaccount();
        obj.currentaccount();
+       obj.electronic();
 
        Labour obj1 = (Labour) context.getBean("labour");
        System.out.println(obj1.getLabid());
